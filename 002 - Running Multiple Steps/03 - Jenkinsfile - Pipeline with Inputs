@@ -5,20 +5,22 @@ pipeline {
 		}
 	}
     stages {
-        stage('build') {
+        stage('ask for name') {
 	    	 input {
                 	message "Name?"
 			parameters {
                     		string(name: 'NAME')
                 	}
 		}
+	}
+        stage('ask for age') {
 		input{
                 	message "Age?"
 			parameters {
                     		string(name: 'AGE')
-                	}
-		}
-            steps {
+                }
+	}
+        steps {
                 echo "$NAME"
                 echo "$AGE"
             }
