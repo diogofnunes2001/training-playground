@@ -1,5 +1,5 @@
 def writeToFile(text = ''){
-	sh "date > $test && cat $text"
+	sh "echo date > $test && cat $text"
 }
 
 pipeline {
