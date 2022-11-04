@@ -11,7 +11,11 @@ pipeline {
     stages {
     	stage("ONE"){
 		steps{
-			writeToFile('a.txt')
+			writeToFile('file.txt')
+			sh 'sleep 10s'
+			writeToFile('file.txt')
+			sh 'sleep 10s'
+			writeToFile('file.txt')
 		}
 	}
     }
