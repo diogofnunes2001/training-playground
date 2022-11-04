@@ -22,11 +22,10 @@ pipeline {
 			parameters {
                     		string(name: 'AGE')
                 	}
-			
+		}	
 		steps {
                 	echo "$AGE"
 		}
 	}
-}
 }
 }
