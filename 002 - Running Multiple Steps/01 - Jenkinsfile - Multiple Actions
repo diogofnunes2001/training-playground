@@ -8,7 +8,7 @@ pipeline {
     	stage("ONE"){
 		steps{
 			touch a.txt
-			date >> a.txt
+			'date > a.txt'
 		}
 	}
     }
